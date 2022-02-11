@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product App"
+        android:textColor="@color/purple_500"
+        android:textSize="29dp"
+        android:textStyle="normal"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="false"
+        android:id="@+id/tv_prod"/>
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_prod"
+        android:layout_marginTop="20dp"
+        android:text="Product Id"
+        android:textColor="@color/purple_500"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/pid"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_prod"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/tv_id"
+        android:editable="false"
+        android:text="Id"
+        android:textColor="@color/purple_500"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_nam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_id"
+        android:layout_marginTop="10dp"
+        android:text="Product Name"
+        android:textColor="@color/purple_500"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nam"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="-34dp"
+        android:layout_toRightOf="@+id/tv_nam"
+        android:editable="false"
+        android:text="Name"
+        android:textColor="@color/purple_500"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="29dp"
+        android:text="Product Description"
+        android:textColor="@color/purple_500"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="21dp"
+        android:layout_toRightOf="@+id/tv_desc"
+        android:editable="false"
+        android:text="Description"
+        android:textColor="@color/purple_500"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_desc"
+        android:layout_marginTop="19dp"
+        android:text="Product Price"
+        android:textColor="@color/purple_500"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/pp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_des"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/tv_price"
+        android:editable="false"
+        android:text="Price"
+        android:textColor="@color/purple_500"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/bt_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_price"
+        android:layout_marginTop="100dp"
+        android:text="Add The Product" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update The product"
+        android:alpha="1"
+        android:layout_below="@+id/bt_add"
+        android:id="@+id/bt_update"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_update"
+        android:text="Delete the Product"
+        android:id="@+id/bt_delete"/>
+
+    <Button
+        android:id="@+id/bt_prev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_delete"
+        android:text="Previous Product" />
+
+    <Button
+        android:id="@+id/bt_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_prev"
+        android:text="Next Product" />
+</RelativeLayout>
