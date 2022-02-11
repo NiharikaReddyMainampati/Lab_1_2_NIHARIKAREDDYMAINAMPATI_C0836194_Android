@@ -37,6 +37,7 @@
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/tv_id"
         android:editable="false"
+        android:enabled="false"
         android:text="Id"
         android:textColor="@color/purple_500"
         android:textSize="20dp"
@@ -62,6 +63,7 @@
         android:layout_marginTop="-34dp"
         android:layout_toRightOf="@+id/tv_nam"
         android:editable="false"
+        android:enabled="false"
         android:text="Name"
         android:textColor="@color/purple_500"
         android:textSize="20dp"
@@ -87,6 +89,7 @@
         android:layout_marginTop="21dp"
         android:layout_toRightOf="@+id/tv_desc"
         android:editable="false"
+        android:enabled="false"
         android:text="Description"
         android:textColor="@color/purple_500"
         android:textSize="20dp"
@@ -112,6 +115,7 @@
         android:layout_marginTop="16dp"
         android:layout_toRightOf="@+id/tv_price"
         android:editable="false"
+        android:enabled="false"
         android:text="Price"
         android:textColor="@color/purple_500"
         android:textSize="20dp"
@@ -124,13 +128,15 @@
         android:layout_below="@+id/tv_price"
         android:layout_marginTop="100dp"
         android:text="Add The Product" />
+
     <Button
+        android:id="@+id/bt_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Update The product"
-        android:alpha="1"
         android:layout_below="@+id/bt_add"
-        android:id="@+id/bt_update"/>
+        android:alpha="1"
+        android:tag="0"
+        android:text="Update The product" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

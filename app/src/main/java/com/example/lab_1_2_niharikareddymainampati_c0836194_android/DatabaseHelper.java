@@ -68,6 +68,40 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = DB.rawQuery("SELECT * FROM PRODUCTS", null);
         return cursor;
     }
+    public Boolean updatedata(String ID, String NAME, String DESCRIPTION, String PRICE)
+    {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(PRODUCT_NAME, NAME);
+        contentValues.put(PRODUCT_DESCRIPTION, DESCRIPTION);
+        contentValues.put(PRODUCT_PRICE, PRICE);
+        Cursor cursor = DB.rawQuery("Select * from PRODUCTS where ID = ?", new String[]{ID});
+        if (cursor.getCount() > 0) {
+            long result = DB.update("PRODUCTS", contentValues, "ID=?", new String[]{ID});
+            if (result == -1) {
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
+    public Boolean deletedata (String ID)
+    {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor = DB.rawQuery("Select * from PRODUCTS where ID = ?", new String[]{ID});
+        if (cursor.getCount() > 0) {
+            long result = DB.delete("PRODUCTS", "ID=?", new String[]{ID});
+            if (result == -1) {
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
 
 
 }
